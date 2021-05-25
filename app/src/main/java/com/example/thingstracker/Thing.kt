@@ -1,10 +1,20 @@
 package com.example.thingstracker
 
-class Thing {
-    private lateinit var name: String
-    private lateinit var place: String
-    private lateinit var date: String
-    private lateinit var time: String
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+import java.time.format.FormatStyle
+
+class Thing(_name: String, _place: String) {
+    private  var name: String = _name
+    private  var place: String = _place
+    private  var date: String
+    private  var time: String
+
+    init {
+        val currentDateTime = LocalDateTime.now()
+        date = currentDateTime.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL))
+        time = currentDateTime.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM))
+    }
 
     fun  getName(): String {
         return name
