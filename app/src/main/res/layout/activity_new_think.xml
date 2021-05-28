@@ -11,6 +11,7 @@
         android:layout_width="191dp"
         android:layout_height="67dp"
         android:text="back to menu"
+        android:onClick="backToMenu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
