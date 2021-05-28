@@ -1,8 +1,9 @@
-package com.example.thingstracker
+package com.example.thingstracker.Activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.thingstracker.R
 import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() {
