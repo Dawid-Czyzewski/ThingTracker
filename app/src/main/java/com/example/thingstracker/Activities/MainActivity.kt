@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Display
 import android.view.View
+import android.widget.Toast
 import com.example.thingstracker.R
 import kotlin.system.exitProcess
 
@@ -18,8 +19,13 @@ class MainActivity : AppCompatActivity() {
         exitProcess(-1)
     }
 
-    fun goToAddNewThinkActivity(view:View){
-        val intent = Intent(this,NewThinkActivity::class.java)
+    fun goToAddNewThingActivity(view: View){
+        val intent = Intent(this, NewThingActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun goToThingsViewActivity(view: View){
+        val intent = Intent(this, ThingsViewActivity::class.java)
         startActivity(intent)
     }
 }
